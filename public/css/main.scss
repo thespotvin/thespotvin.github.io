@@ -1,0 +1,225 @@
+---
+---
+
+// imports
+
+@import 'bootstrap';
+@import 'helpers';
+@import 'syntax';
+
+// colors
+
+$grey: rgb(64,64,64);
+$light-grey: #ccc;
+$off-white: #f1f1f1;
+$gold: rgb(191,144,44);
+$light-gold: rgb(230,178,78);
+$dark-gold: rgb(151,114,35);
+
+// styles begins
+
+html { font-size: 62.5%; }
+
+html, body { height: 100%; }
+
+body {
+   font-family: "rooney-web", sans-serif;
+   font-size: 1.7rem;
+   line-height: 1.6;
+   font-weight: 300;
+   color: $grey;
+   background: url('/public/img/bg-with-ht.png') no-repeat right top fixed;
+   -webkit-background-size: cover;
+      -moz-background-size: cover;
+        -o-background-size: cover;
+           background-size: cover;
+}
+
+a {
+   color: #000;
+}
+
+a:hover, a:focus {
+   color: $gold;
+   text-decoration: none;
+}
+
+a:active {
+   color: $gold;
+}
+
+section {
+   padding: 1rem 0 1rem 0;
+}
+
+// nav style
+
+.primary-nav {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   .nav-holder {
+      overflow: hidden;
+      height: 40px;
+      display: inline-block;
+      div {
+         background: rgba(255,255,255,0.5);
+         position: relative;
+         a {
+            display: inline-block;
+            padding: 0.15rem 0.5rem 0.15rem 0.5rem;
+            &:hover {
+               color: #fff;
+            }
+         }
+         &:after {
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 50%;
+            margin-left: -110px;
+            width: 0;
+            height: 0;
+            border-left: 120px solid transparent;
+            border-right: 120px solid transparent;
+            border-top: 8px solid rgba(255,255,255,0.5);
+         }
+      }
+   }
+}
+
+// site header
+
+.site-header {
+   padding: 11rem 0 2rem 0;
+   img {
+      max-width: 50%;
+   }
+   .hdr-btns {
+      padding: 6rem;
+      a {
+         background: $gold;
+         padding: 2rem;
+      }
+   }
+}
+
+// footer style
+
+.site-footer {
+   padding: 4rem 0 1.5rem 0;
+   color: $off-white;
+   .soci {
+      display: inline-block;
+      width: 70px;
+      line-height: 70px;
+      font-family: "socicon";
+      background: $gold;
+      font-size: 3rem;
+      @include rounded(50%);
+      color: #fff;
+      margin: 0 0.5rem 2rem 0.5rem;
+      @include transitions(150ms);
+      &:hover {
+         background: $light-gold;
+         color: $grey;
+            -moz-transform: scale(1.15);
+         -webkit-transform: scale(1.15);
+              -o-transform: scale(1.15);
+             -ms-transform: scale(1.15);
+                 transform: scale(1.15);
+      }
+   }
+}
+
+// home style
+
+.home {
+   background: url('/public/img/halftone.png');
+   .dual-text {
+      .left {
+         width: 48%;
+         float: left;
+         text-align: right;
+         padding-left: 10%;
+      }
+      .right {
+         width: 48%;
+         float: right;
+         text-align: left;
+         padding-right: 10%;
+      }
+   }
+   .partners {
+      ul {
+         li {
+            width: 50%;
+            float: left;
+            a {
+               display: block;
+               img {
+                  max-width: 94%;
+                  margin: 3%;
+               }
+               &:hover {
+                  background: $off-white;
+               }
+            }
+         }
+      }
+   }
+}
+
+.mini-heads {
+   border: 4px solid $light-grey;
+   display: inline-block;
+   position: relative;
+   overflow: hidden;
+   @include rounded(50%);
+   em {
+      position: absolute;
+      left: 0;
+      bottom: 12%;
+      width: 100%;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      color: $light-grey;
+   }
+}
+
+// contact
+
+#map-canvas {
+   height: 400px;
+}
+
+.contact {
+   position: relative;
+   padding-bottom: 0;
+   .address-block {
+      position: absolute;
+      bottom: 40px;
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+      padding: 0.75rem;
+      h3 {
+         color: #fff;
+         margin: 0 0 0.25rem 0;
+      }
+      p {
+         color: $off-white;
+         margin: 0;
+      }
+      a {
+         color: $off-white;
+      }
+   }
+}
+
+// broadcasts
+
+.broadcast-posts {
+   border: 1px solid red;
+}
+
+@import 'mqueries';

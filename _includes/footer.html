@@ -1,0 +1,21 @@
+<footer class="site-footer text-center">
+
+   <a class="soci" href="#">a</a>
+   <a class="soci" href="#">b</a>
+   <a class="soci" href="#">j</a>
+
+   <p>Spotvin is a full service design and strategy firm located in Windsor, Ontario.</p>
+   <p>Interested in working with us?</p>
+   <p class="copyright">&copy; Spotvin Inc. 2014</p>
+
+</footer>
+
+<nav class="primary-nav text-center">
+   <div class="nav-holder">
+      <div>
+         {% for page in site.pages %}
+            {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
+         {% endfor %}
+      </div>
+   </div>
+</nav>
