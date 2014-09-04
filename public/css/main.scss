@@ -25,7 +25,7 @@ html, body { height: 100%; }
 
 body {
    font-family: "rooney-web", sans-serif;
-   font-size: 1.7rem;
+   font-size: 1.6rem;
    line-height: 1.6;
    font-weight: 300;
    color: $grey;
@@ -38,11 +38,16 @@ body {
 
 a {
    color: #000;
+   border-bottom: 1px solid $light-gold;
+      box-shadow: inset 0 -2px 0 $light-gold;
+   @include transitions(100ms);
 }
 
 a:hover, a:focus {
-   color: $gold;
+   color: #777;
    text-decoration: none;
+   border-bottom: 1px solid $light-grey;
+      box-shadow: inset 0 0 0 transparent;
 }
 
 a:active {
@@ -119,7 +124,7 @@ section {
       font-size: 3rem;
       @include rounded(50%);
       color: #fff;
-      margin: 0 0.5rem 2rem 0.5rem;
+      margin: 2rem 0.5rem 2rem 0.5rem;
       @include transitions(150ms);
       &:hover {
          background: $light-gold;
@@ -129,6 +134,12 @@ section {
               -o-transform: scale(1.15);
              -ms-transform: scale(1.15);
                  transform: scale(1.15);
+      }
+   }
+   h3 {
+      color: #fff;
+      a {
+         color: inherit;
       }
    }
 }
@@ -220,7 +231,40 @@ section {
 // broadcasts
 
 .broadcast-posts {
-   border: 1px solid red;
+   .single-post {
+      margin: 0 5% 0 5%;
+      position: relative;
+      padding-bottom: 15px;
+      overflow: hidden;
+      .post-body {
+         background: $off-white;
+         padding: 0.01rem 0.75rem 0.01rem 0.75rem;
+         @include rounded(2px 2px 0 0);
+         &:after {
+            content: ' ';
+            position: absolute;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -400px;
+            border-left: 400px solid transparent;
+            border-right: 400px solid transparent;
+            border-top: 15px solid $off-white;
+         }
+      }
+   }
+   .post-footer {
+      color: #fff;
+      padding: 1rem 0 4rem 0;
+      a {
+         color: inherit;
+      }
+      span {
+         color: $light-gold;
+      }
+   }
 }
 
 @import 'mqueries';

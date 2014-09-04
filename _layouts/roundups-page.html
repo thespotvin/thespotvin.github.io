@@ -1,24 +1,36 @@
 ---
-layout: default
+layout: secondary
 ---
 <div class="post">
 
-  <header class="post-header">
+  <header class="post-header text-center">
     <h1>{{ page.title }}</h1>
   </header>
 
-   <ul class="broadcast-posts">
+  <article class="post-content text-center">
+     {{ content }}
+  </article>
+
+   <ul class="broadcast-posts list-unstyled">
      {% for post in site.categories.roundup %}
-       <li>
-         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-         <p>{{ post.content }}</p>
+       <li class="single-post">
+         <div class="post-body text-center">
+            <!-- <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+            <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+            <p>{{ post.content }}</p>
+         </div>
        </li>
+
+       <div class="post-footer text-center">
+          <small>
+             <a href="https://twitter.com/intent/tweet?url={{ post.url | prepend: site.baseurl }}&text={{ page.title }}&via=spotvin" target="_blank">Share on Twitter</a>
+             <span>|</span>
+             <a title="send to Facebook"
+     href="http://www.facebook.com/sharer.php?s=100&p[title]={{ post.title }}&p[summary]=YOUR_SUMMARY&p[url]={{ post.url | prepend: site.baseurl }}" target="_blank">Share on Facebook</a>
+           </small>
+       </div>
+
      {% endfor %}
    </ul>
-
-  <article class="post-content">
-  {{ content }}
-  </article>
 
 </div>
