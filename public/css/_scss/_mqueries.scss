@@ -34,10 +34,28 @@
          }
       }
    }
+
+   .broadcast-posts, .folio-posts {
+      .single-post {
+         .post-body {
+            &:after {
+               margin-left: -600px;
+               border-left: 600px solid transparent;
+               border-right: 600px solid transparent;
+               border-top: 22px solid $off-white;
+            }
+         }
+      }
+   }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+
+   .broadcast-posts, .folio-posts {
+      max-width: 1200px;
+      margin: 0 auto;
+   }
 
 }
 
