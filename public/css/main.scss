@@ -50,6 +50,11 @@ a:hover, a:focus {
       box-shadow: inset 0 0 0 transparent;
 } */
 
+h1, h2, h3, h4 {
+   font-family: "museo-slab";
+   color: $gold;
+}
+
 a {
    color: #000;
 }
@@ -59,7 +64,7 @@ a:active {
 }
 
 section {
-   padding: 1rem 0 1rem 0;
+   padding: 0;
 }
 
 // nav style
@@ -69,6 +74,17 @@ section {
    top: 0;
    width: 100%;
    .nav-holder {
+      div {
+         background: $gold;
+         a {
+            img {
+               width: 40px;
+               height: 40px;
+            }
+         }
+      }
+   }
+   /* .nav-holder {
       overflow: hidden;
       height: 40px;
       display: inline-block;
@@ -95,21 +111,42 @@ section {
             border-top: 8px solid rgba(255,255,255,0.5);
          }
       }
-   }
+   } */
 }
 
 // site header
 
 .site-header {
    padding: 11rem 0 2rem 0;
-   img {
+   .site-mast {
       max-width: 50%;
+      margin-bottom: 3rem;
    }
    .hdr-btns {
-      padding: 6rem;
       a {
-         background: $gold;
-         padding: 2rem;
+         color: #fff;
+         img {
+            width: 100px;
+            margin-bottom: 1em;
+            @include transitions(200ms);
+         }
+         div {
+            opacity: 0.5;
+            @include transitions(200ms);
+            margin-bottom: 3rem;
+         }
+         &:hover {
+            img {
+               -moz-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+                 -o-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                    transform: scale(1.2);
+            }
+            div {
+               opacity: 1;
+            }
+         }
       }
    }
 }
@@ -152,7 +189,12 @@ section {
 
 .home {
    background: url('/public/img/halftone.png');
+   .intro {
+      padding: 2rem 0 2rem 0;
+   }
    .dual-text {
+      padding: 1rem 0 1rem 0;
+      font-weight: 500;
       .left {
          width: 48%;
          float: left;
@@ -168,6 +210,7 @@ section {
    }
    .partners {
       ul {
+         margin-bottom: 0;
          li {
             width: 50%;
             float: left;
@@ -181,6 +224,44 @@ section {
                   background: $off-white;
                }
             }
+         }
+      }
+   }
+   .services {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      text-align: center;
+      ul {
+         li {
+            display: inline;
+            &:after {
+               content: ', ';
+            }
+            &:last-child:after {
+               content: '';
+            }
+         }
+      }
+   }
+   .contact {
+      position: relative;
+      padding-bottom: 0;
+      .address-block {
+         position: absolute;
+         bottom: 40px;
+         width: 100%;
+         background: rgba(191,144,44,0.75);
+         padding: 0.75rem;
+         h4 {
+            color: #fff;
+            margin: 0 0 0.25rem 0;
+         }
+         p {
+            color: $off-white;
+            margin: 0;
+         }
+         a {
+            color: $off-white;
          }
       }
    }
@@ -207,29 +288,6 @@ section {
 
 #map-canvas {
    height: 400px;
-}
-
-.contact {
-   position: relative;
-   padding-bottom: 0;
-   .address-block {
-      position: absolute;
-      bottom: 40px;
-      width: 100%;
-      background: rgba(0,0,0,0.5);
-      padding: 0.75rem;
-      h3 {
-         color: #fff;
-         margin: 0 0 0.25rem 0;
-      }
-      p {
-         color: $off-white;
-         margin: 0;
-      }
-      a {
-         color: $off-white;
-      }
-   }
 }
 
 // broadcasts

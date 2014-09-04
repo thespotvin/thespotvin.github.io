@@ -14,9 +14,12 @@
 <nav class="primary-nav text-center">
    <div class="nav-holder">
       <div>
-         {% for page in site.pages %}
-            {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
-         {% endfor %}
+         <a href=""><img src="/public/img/broadcast.svg" alt="Weekly Broadcasts"></a>
+         <a href=""><img src="/public/img/team.svg" alt="Meet The Team"></a>
+         <a href=""><img src="/public/img/work.svg" alt="Meet The Team"></a>
+<!--          {% for page in site.pages %}
+   {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
+{% endfor %} -->
       </div>
    </div>
 </nav>
