@@ -16,3 +16,4 @@ rouge:            true
 # Sass
 sass:
   sass_dir:		/public/css/_scss
+  style:       :compressed
