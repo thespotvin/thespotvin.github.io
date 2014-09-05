@@ -158,6 +158,13 @@ section {
 }
 
 .secondary-page {
+   .sec-inner {
+      position: fixed;
+      background: rgba(0,0,0,0.25);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+   }
    .site-header {
       padding: 6rem 0 2rem 0;
       .site-mast {
