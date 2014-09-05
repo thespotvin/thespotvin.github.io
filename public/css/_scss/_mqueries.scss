@@ -80,3 +80,11 @@
       }
    }
 }
+
+// background size fix
+
+@media (max-width: @iphone-screen) {
+   body {
+      background-attachment: scroll;   
+   }
+}
