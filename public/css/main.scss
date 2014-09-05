@@ -241,6 +241,7 @@ section {
             float: left;
             a {
                display: block;
+               @include transitions(200ms);
                img {
                   max-width: 94%;
                   margin: 3%;
