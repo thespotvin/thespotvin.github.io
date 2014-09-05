@@ -155,7 +155,7 @@ section {
    .site-header {
       padding: 6rem 0 2rem 0;
       .site-mast {
-         max-width: 30%;
+         max-width: 45%;
          margin-bottom: 0;
       }
    }
@@ -292,6 +292,48 @@ section {
       text-align: center;
       background: rgba(0,0,0,0.5);
       color: $light-grey;
+   }
+}
+
+// team
+
+.team-page {
+   ul {
+      li {
+         width: 70%;
+         margin: 0 auto 2rem auto;
+         border: 10px solid $light-grey;
+         overflow: hidden;
+         position: relative;
+         @include rounded(50%);
+         img {
+            width: 100%;
+            display: block;
+         }
+         div {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            text-align: center;
+            padding-top: 10px;
+            small {
+               display: block;
+            }
+            h4 {
+               color: $gold;
+               margin: 0;
+               line-height: 20px;
+            }
+            a {
+               font-family: "socicon";
+               color: #fff;
+               font-size: 0.8em;
+               margin: 0 0.15em 0 0.15em;
+            }
+         }
+      }
    }
 }
 

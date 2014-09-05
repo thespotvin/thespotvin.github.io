@@ -47,6 +47,15 @@
          }
       }
    }
+   .team-page {
+      ul {
+         li {
+            width: 34%;
+            float: left;
+            margin: 0 8% 2rem 8%;
+         }
+      }
+   }
 }
 
 /* Medium Devices, Desktops */
@@ -61,5 +70,13 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-
+   .team-page {
+      ul {
+         li {
+            width: 28%;
+            float: left;
+            margin: 0 2.5% 2rem 2.5%;
+         }
+      }
+   }
 }
