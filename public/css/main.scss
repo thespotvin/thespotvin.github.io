@@ -78,8 +78,14 @@ section {
          background: $gold;
          a {
             img {
-               width: 40px;
-               height: 40px;
+
+            }
+         }
+         &:hover {
+            a {
+               img {
+                  width: 40px;
+               }
             }
          }
       }
@@ -158,6 +164,15 @@ section {
          max-width: 45%;
          margin-bottom: 0;
       }
+   }
+   .post-header {
+      h1 {
+         color: #fff;
+      }
+   }
+   .post-content {
+      color: $off-white;
+      padding: 2rem 8rem;
    }
 }
 
