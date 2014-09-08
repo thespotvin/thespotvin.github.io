@@ -7,6 +7,7 @@
 @import 'bootstrap';
 @import 'helpers';
 @import 'syntax';
+@import 'rotator';
 
 // colors
 
@@ -75,18 +76,29 @@ section {
    width: 100%;
    .nav-holder {
       div {
+         display: inline-block;
          background: $gold;
+         font-size: 1.45rem;
+         padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+         @include rounded(0 0 3px 3px);
+         @include transitions(200ms);
          a {
-            img {
-
+            color: #fff;
+            font-style: italic;
+            @include transitions(100ms);
+            &:hover {
+               color: #333;
             }
          }
+         span {
+            vertical-align: middle;
+            color: $dark-gold;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+         }
          &:hover {
-            a {
-               img {
-                  width: 35px;
-               }
-            }
+            padding-top: 1rem;
+            padding-bottom: 1rem;
          }
       }
    }
@@ -152,6 +164,14 @@ section {
             div {
                opacity: 1;
             }
+         }
+      }
+   }
+   .we-craft {
+      h3 {
+         color: #fff;
+         span {
+            color: $gold;
          }
       }
    }
