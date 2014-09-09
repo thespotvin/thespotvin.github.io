@@ -78,7 +78,7 @@ section {
       div {
          display: inline-block;
          background: $gold;
-         font-size: 1.4rem;
+         font-size: 1.5rem;
          vertical-align: top;
          padding-right: 1.5rem;
          @include rounded(0 0 5px 5px);
@@ -93,6 +93,11 @@ section {
             display: inline-block;
             color: #fff;
             line-height: 30px;
+            @include transitions(200ms);
+            &:hover {
+               color: #333;
+               text-decoration: none;
+            }
          }
          .home-lnk {
             padding-left: 1rem;
@@ -101,7 +106,7 @@ section {
             background: $dark-gold;
             img {
                opacity: 0.7;
-               @include transitions(150ms);
+               @include transitions(200ms);
             }
             &:hover {
                img {
@@ -187,13 +192,6 @@ section {
 }
 
 .secondary-page {
-   .sec-inner {
-      position: fixed;
-      background: rgba(0,0,0,0.25);
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-   }
    .site-header {
       padding: 6rem 0 2rem 0;
       .site-mast {
@@ -210,6 +208,15 @@ section {
       color: $off-white;
       padding: 2rem 8rem;
    }
+}
+
+.sec-inner {
+   position: fixed;
+   top: 0;
+   background: rgba(0,0,0,0.3);
+   width: 100%;
+   height: 100%;
+   z-index: -1;
 }
 
 // footer style
@@ -440,6 +447,33 @@ section {
       img {
          width: 105%;
          margin: -1rem -2rem 0 -2rem;
+      }
+   }
+}
+
+// 404 page
+
+.error-page {
+   h1 {
+      margin-top: 10rem;
+   }
+   .banner-area {
+      padding: 2rem;
+      h1 {
+         margin: 0;
+      }
+      margin-top: 10rem;
+      background: rgba(0,0,0,0.7);
+      p {
+         margin: 4rem 0 2rem 0;
+         color: $off-white;
+         a {
+            color: inherit;
+            text-decoration: underline;
+            &:hover {
+               color: $gold;
+            }
+         }
       }
    }
 }
