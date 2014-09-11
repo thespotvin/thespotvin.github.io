@@ -20,9 +20,13 @@ $dark-gold: rgb(151,114,35);
 
 // styles begins
 
-html { font-size: 62.5%; }
+html {
+   font-size: 62.5%;
+}
 
-html, body { height: 100%; }
+html, body {
+   min-height: 100%;
+}
 
 body {
    font-family: "rooney-web", sans-serif;
@@ -30,11 +34,18 @@ body {
    line-height: 1.6;
    font-weight: 300;
    color: $grey;
-   background: url('/public/img/bg-with-ht.png') no-repeat right top fixed;
-   -webkit-background-size: cover;
-      -moz-background-size: cover;
-        -o-background-size: cover;
-           background-size: cover;
+
+/* background: url('/public/img/bg-with-ht.png') no-repeat right top;
+background-attachment: fixed;
+-webkit-background-size: cover;
+   -moz-background-size: cover;
+     -o-background-size: cover;
+        background-size: cover; */
+}
+
+.bg-img {
+   position: fixed;
+   z-index: -10;
 }
 
 a, a:hover {
