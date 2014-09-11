@@ -76,14 +76,14 @@ section {
    width: 100%;
    .nav-holder {
       div {
-         display: inline-block;
+         display: block;
          background: $gold;
          font-size: 1.5rem;
          vertical-align: top;
          padding-right: 1.5rem;
-         @include rounded(0 0 5px 5px);
+
          overflow: hidden;
-         border: 2px solid rgba(255,255,255,0.35);
+         border-bottom: 2px solid rgba(255,255,255,0.35);
          border-top: none;
          span {
             vertical-align: middle;
@@ -336,40 +336,41 @@ section {
 // team
 
 .team-page {
-   .post-content {
-      padding: 0;
-      ul {
-         margin: 3rem 0 3rem 0;
-         li {
-            width: 50%;
-            float: left;
-            margin: 0;
-            position: relative;
-            overflow: hidden;
-            img {
-               width: 100%;
+   ul {
+      margin: 3rem 0 3rem 0;
+      li {
+         width: 50%;
+         float: left;
+         margin: 0;
+         position: relative;
+         overflow: hidden;
+         img {
+            width: 100%;
+         }
+         div {
+            position: absolute;
+            background: rgba(0,0,0,0.5);
+            width: 100%;
+            bottom: -55px;
+            @include transitions(175ms);
+            h4, small {
+               line-height: 30px;
+               display: block;
+               margin: 0;
             }
+            a {
+               font-family: "socicon";
+               color: $gold;
+               line-height: 30px;
+            }
+            small {
+               color: #fff;
+               line-height: 22px;
+            }
+         }
+         &:hover {
             div {
-               position: absolute;
-               background: rgba(0,0,0,0.5);
-               width: 100%;
-               bottom: -60px;
-               @include transitions(175ms);
-               h4, small {
-                  line-height: 30px;
-                  display: block;
-                  margin: 0;
-               }
-               a {
-                  font-family: "socicon";
-                  color: $gold;
-                  line-height: 30px;
-               }
-            }
-            &:hover {
-               div {
-                  bottom: 0px;
-               }
+               bottom: 0px;
             }
          }
       }

@@ -13,7 +13,17 @@
    body {
       font-size: 1.9rem;
    }
+   .primary-nav {
+      .nav-holder {
 
+         div {
+            display: inline-block;
+            @include rounded(0 0 5px 5px);
+            border-left: 2px solid rgba(255,255,255,0.35);
+            border-right: 2px solid rgba(255,255,255,0.35);
+         }
+      }
+   }
    .home {
       .partners {
          ul {
@@ -48,11 +58,9 @@
       }
    }
    .team-page {
-      .post-content {
-         ul {
-            li {
-               width: 33.333%;
-            }
+      ul {
+         li {
+            width: 33.333%;
          }
       }
    }
@@ -67,11 +75,9 @@
    }
 
    .team-page {
-      .post-content {
-         ul {
-            li {
-               width: 20%;
-            }
+      ul {
+         li {
+            width: 20%;
          }
       }
    }
@@ -80,15 +86,7 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-   .team-page {
-      ul {
-         li {
-            width: 28%;
-            float: left;
-            margin: 0 2.5% 2rem 2.5%;
-         }
-      }
-   }
+
 }
 
 // background size fix
