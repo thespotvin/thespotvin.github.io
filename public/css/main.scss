@@ -382,7 +382,7 @@ section {
 
 // broadcasts
 
-.broadcast-posts, .folio-posts {
+.broadcast-posts, .folio-posts, .post {
    .single-post {
       margin: 0 5% 0 5%;
       position: relative;
@@ -397,6 +397,7 @@ section {
          background: $off-white;
          padding: 0.01rem 1rem 0.01rem 1rem;
          @include rounded(6px 6px 0 0);
+         border: 1px solid $off-white;
          &:after {
             content: ' ';
             position: absolute;
