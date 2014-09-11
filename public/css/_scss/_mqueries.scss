@@ -96,12 +96,14 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) {
    body {
       background: url('/public/img/bg-ios.png');
-      header {
-                      background: url('/public/img/bg-with-ht.png') no-repeat right top scroll;
-         -webkit-background-size: cover;
-            -moz-background-size: cover;
-              -o-background-size: cover;
-                 background-size: cover;
+      &.default-template {
+         header {
+                         background: url('/public/img/bg-with-ht.png') no-repeat right top scroll;
+            -webkit-background-size: cover;
+               -moz-background-size: cover;
+                 -o-background-size: cover;
+                    background-size: cover;
+         }
       }
    }
 }
@@ -110,12 +112,14 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)  {
    body {
       background: url('/public/img/bg-ios.png');
-      header {
-                      background: url('/public/img/bg-with-ht.png') no-repeat right top scroll;
-         -webkit-background-size: cover;
-            -moz-background-size: cover;
-              -o-background-size: cover;
-                 background-size: cover;
+      &.default-template {
+         header {
+                         background: url('/public/img/bg-with-ht.png') no-repeat right top scroll;
+            -webkit-background-size: cover;
+               -moz-background-size: cover;
+                 -o-background-size: cover;
+                    background-size: cover;
+         }
       }
    }
 }
