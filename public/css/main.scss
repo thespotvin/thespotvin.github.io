@@ -35,8 +35,7 @@ body {
    font-weight: 300;
    color: $grey;
 
-   background: url('/public/img/bg-with-ht.png') no-repeat right top;
-background-attachment: fixed;
+   background: url('/public/img/bg-with-ht.png') no-repeat right top fixed;
 -webkit-background-size: cover;
    -moz-background-size: cover;
      -o-background-size: cover;
