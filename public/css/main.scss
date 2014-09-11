@@ -83,6 +83,8 @@ section {
          padding-right: 1.5rem;
          @include rounded(0 0 5px 5px);
          overflow: hidden;
+         border: 2px solid rgba(255,255,255,0.35);
+         border-top: none;
          span {
             vertical-align: middle;
             color: $dark-gold;
@@ -121,34 +123,6 @@ section {
          }
       }
    }
-   /* .nav-holder {
-      overflow: hidden;
-      height: 40px;
-      display: inline-block;
-      div {
-         background: rgba(255,255,255,0.5);
-         position: relative;
-         a {
-            display: inline-block;
-            padding: 0.15rem 0.5rem 0.15rem 0.5rem;
-            &:hover {
-               color: #fff;
-            }
-         }
-         &:after {
-            content: ' ';
-            display: block;
-            position: absolute;
-            left: 50%;
-            margin-left: -110px;
-            width: 0;
-            height: 0;
-            border-left: 120px solid transparent;
-            border-right: 120px solid transparent;
-            border-top: 8px solid rgba(255,255,255,0.5);
-         }
-      }
-   } */
 }
 
 // site header
@@ -362,39 +336,40 @@ section {
 // team
 
 .team-page {
-   ul {
-      li {
-         width: 70%;
-         margin: 0 auto 2rem auto;
-         border: 10px solid $light-grey;
-         overflow: hidden;
-         position: relative;
-         @include rounded(50%);
-         img {
-            width: 100%;
-            display: block;
-         }
-         div {
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-            color: #fff;
-            text-align: center;
-            padding-top: 10px;
-            small {
-               display: block;
+   .post-content {
+      padding: 0;
+      ul {
+         margin: 3rem 0 3rem 0;
+         li {
+            width: 50%;
+            float: left;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            img {
+               width: 100%;
             }
-            h4 {
-               color: $gold;
-               margin: 0;
-               line-height: 20px;
+            div {
+               position: absolute;
+               background: rgba(0,0,0,0.5);
+               width: 100%;
+               bottom: -60px;
+               @include transitions(175ms);
+               h4, small {
+                  line-height: 30px;
+                  display: block;
+                  margin: 0;
+               }
+               a {
+                  font-family: "socicon";
+                  color: $gold;
+                  line-height: 30px;
+               }
             }
-            a {
-               font-family: "socicon";
-               color: #fff;
-               font-size: 0.8em;
-               margin: 0 0.15em 0 0.15em;
+            &:hover {
+               div {
+                  bottom: 0px;
+               }
             }
          }
       }

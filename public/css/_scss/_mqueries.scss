@@ -48,11 +48,11 @@
       }
    }
    .team-page {
-      ul {
-         li {
-            width: 34%;
-            float: left;
-            margin: 0 8% 2rem 8%;
+      .post-content {
+         ul {
+            li {
+               width: 33.333%;
+            }
          }
       }
    }
@@ -64,6 +64,16 @@
    .broadcast-posts, .folio-posts {
       max-width: 1200px;
       margin: 0 auto;
+   }
+
+   .team-page {
+      .post-content {
+         ul {
+            li {
+               width: 20%;
+            }
+         }
+      }
    }
 
 }
