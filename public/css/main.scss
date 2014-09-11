@@ -32,24 +32,11 @@ body {
    line-height: 1.6;
    font-weight: 300;
    color: $grey;
-
-   background: url('/public/img/bg-with-ht.png') no-repeat right top fixed;
--webkit-background-size: cover;
-   -moz-background-size: cover;
-     -o-background-size: cover;
-        background-size: cover;
-}
-
-.bg-img {
-   position: fixed;
-   z-index: -1;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   img {
-      height: 100%;
-   }
+                background: url('/public/img/bg-with-ht.png') no-repeat right top fixed;
+   -webkit-background-size: cover;
+      -moz-background-size: cover;
+        -o-background-size: cover;
+           background-size: cover;
 }
 
 a, a:hover {
