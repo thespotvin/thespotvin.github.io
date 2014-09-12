@@ -22,6 +22,7 @@ $dark-gold: rgb(151,114,35);
 
 html {
    font-size: 62.5%;
+   -webkit-font-smoothing: antialiased;
 }
 
 html, body { height: 100%; }
@@ -30,7 +31,7 @@ body {
    font-family: "rooney-web", sans-serif;
    font-size: 1.6rem;
    line-height: 1.6;
-   font-weight: 300;
+   font-weight: 400;
    color: $grey;
                 background: url('/public/img/bg-with-ht.png') no-repeat right top fixed;
    -webkit-background-size: cover;
@@ -101,6 +102,8 @@ section {
             }
          }
          .home-lnk {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
             padding-left: 1rem;
             padding-right: 1rem;
             margin-right: 1rem;
@@ -184,7 +187,6 @@ section {
    }
    .post-content {
       color: $off-white;
-      padding: 2rem 8rem;
    }
 }
 
@@ -384,7 +386,7 @@ section {
 
 // broadcasts
 
-.broadcast-posts, .folio-posts, .post {
+.broadcast-posts, .folio-posts, .post, .interested-page {
    .single-post {
       margin: 0 5% 0 5%;
       position: relative;
