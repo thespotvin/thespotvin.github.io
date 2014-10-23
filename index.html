@@ -13,7 +13,7 @@ layout: default
             
             <h3>Who We Are</h3>
 
-            <p>Spotvin is a dynamic, boutique agency located in Walkerville in Windsor, Ontario.</p>
+            <p>Spotvin is a dynamic, boutique design agency located in Walkerville in Windsor, Ontario.</p>
 
             <p>At it’s heart, Spotvin’s creativity drives everything we do. The cookie cutter approach has become the norm for advertising and marketing agencies, but we have always believed that strong results come from great ideas. Deep down we’re design nerds, sweating the details isn’t just our job - it’s our passion.</p>
 
@@ -157,6 +157,7 @@ layout: default
          }
        }
       });
+
    });
 
    var styles = [
@@ -246,4 +247,12 @@ layout: default
      });
    }
    google.maps.event.addDomListener(window, 'load', initialize);
+
+   $(window).load(function() {
+      $('.site-mast').addClass('mast-active');
+      setTimeout(function () { 
+         $('.site-mast').removeClass('mast-active');
+      }, 750);
+   });
+
 </script>

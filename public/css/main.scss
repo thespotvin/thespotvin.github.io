@@ -131,9 +131,15 @@ section {
 
 .site-header {
    padding: 11rem 0 2rem 0;
+   perspective: 1000;
    .site-mast {
       max-width: 50%;
       margin-bottom: 3rem;
+      backface-visibility: visible;
+      @include transitions(450ms);
+   }
+   .mast-active {
+      transform: rotateY(90deg);
    }
    .hdr-btns {
       a {
