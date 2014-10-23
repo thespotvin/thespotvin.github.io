@@ -13,6 +13,13 @@
    body {
       font-size: 1.9rem;
    }
+   .site-header {
+      .we-craft {
+         h3 {
+            font-size: 180%;
+         }
+      }
+   }
    .primary-nav {
       .nav-holder {
 
@@ -29,17 +36,6 @@
          ul {
             li {
                width: 33.333%;
-            }
-         }
-      }
-      .services {
-         text-align: left;
-         ul {
-            li {
-               display: block;
-               &:after {
-                  content: '';
-               }
             }
          }
       }

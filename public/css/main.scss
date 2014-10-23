@@ -140,7 +140,8 @@ section {
          color: #fff;
          img {
             width: 100px;
-            margin-bottom: 1em;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
             @include transitions(200ms);
          }
          div {
