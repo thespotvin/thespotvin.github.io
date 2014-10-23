@@ -3,35 +3,41 @@ layout: secondary
 ---
 <div class="post">
 
-  <header class="post-header text-center">
-    <h1>{{ page.title }}</h1>
-    <img src="/public/img/folio-lg.svg">
-  </header>
+	<header class="post-header text-center">
+		<h1>{{ page.title }}</h1>
+		<img src="/public/img/folio-lg.svg">
+	</header>
 
-  <article class="post-content text-center">
-     {{ content }}
-  </article>
+	<article class="post-content text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					{{ content }}
+				</div> <!-- col -->
+			</div> <!-- row -->
+		</div> <!-- container -->
+	</article>
 
-   <ul class="folio-posts list-unstyled">
-     {% for post in site.categories.folio %}
-       <li class="single-post">
-         <div class="post-body text-center copy-area">
-            <!-- <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span> -->
-            <!-- <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3> -->
-            <p>{{ post.content }}</p>
-         </div>
-       </li>
+	<ul class="folio-posts list-unstyled">
+	 {% for post in site.categories.folio %}
+	 <li class="single-post">
+		 <div class="post-body text-center copy-area">
+			<!-- <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+			<!-- <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3> -->
+			<p>{{ post.content }}</p>
+		</div>
+	</li>
 
-       <div class="post-footer text-center">
-          <small>
-             <a href="https://twitter.com/intent/tweet?url={{ post.url | prepend: site.baseurl }}&text={{ page.title }}&via=spotvin" target="_blank">Share on Twitter</a>
-             <span>|</span>
-             <a title="send to Facebook"
-     href="http://www.facebook.com/sharer.php?s=100&p[title]={{ post.title }}&p[url]={{ post.url | prepend: site.baseurl }}" target="_blank">Share on Facebook</a>
-           </small>
-       </div>
+	<div class="post-footer text-center">
+		<small>
+		 <a href="https://twitter.com/intent/tweet?url={{ post.url | prepend: site.baseurl }}&text={{ page.title }}&via=spotvin" target="_blank">Share on Twitter</a>
+		 <span>|</span>
+		 <a title="send to Facebook"
+		 href="http://www.facebook.com/sharer.php?s=100&p[title]={{ post.title }}&p[url]={{ post.url | prepend: site.baseurl }}" target="_blank">Share on Facebook</a>
+	 </small>
+ </div>
 
-     {% endfor %}
-   </ul>
+ {% endfor %}
+</ul>
 
 </div>

@@ -4,4 +4,4 @@ title: Broadcasts
 permalink: /broadcasts/
 ---
 
-Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus.
+Each week we like to publish a micro-roundup of what we've been up to, projects we've been working on and what's going on in Windsor and the world. For a more in-depth view, [Facebook](http://facebook.com/thespotvin) is where we currently publish most often.
