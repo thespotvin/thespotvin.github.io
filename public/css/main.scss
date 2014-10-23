@@ -436,10 +436,21 @@ section {
 // interested page/form
 
 .interested-form {
-   padding: 2rem;
+   padding: 2rem 2rem 0;
+   .row {
+      margin-bottom: 1rem;
+   }
    label.control-label {
       color: $gold;
       text-align: center;
+   }
+   button {
+      margin-top: 2rem;
+      color: #fff;
+      background: $light-gold;
+      border: 2px solid $gold;
+      @include rounded(6px);
+      padding: 0 1rem 0 1rem;
    }
 }
 
