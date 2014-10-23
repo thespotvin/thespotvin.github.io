@@ -433,6 +433,16 @@ section {
    }
 }
 
+// interested page/form
+
+.interested-form {
+   padding: 2rem;
+   label.control-label {
+      color: $gold;
+      text-align: center;
+   }
+}
+
 // 404 page
 
 .error-page {

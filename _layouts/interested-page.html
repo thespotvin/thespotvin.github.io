@@ -1,58 +1,75 @@
 ---
 layout: secondary
 ---
-<div class="interested-page">
+<div class="interested-page secondary-page">
 
-   <header class="post-header text-center">
-      <h1>{{ page.title }}</h1>
-      <img src="/public/img/team-lg.svg">
-   </header>
+	<header class="post-header text-center">
+		<h1>{{ page.title }}</h1>
+		<img src="/public/img/team-lg.svg">
+	</header>
 
-   <article class="text-center">
+	<article class="post-content text-center">
 
-      Interested? More content to go here.
+		<p>Interested? More content to go here.</p>
 
-      <div class="single-post">
+		<div class="single-post">
 
-         <div class="post-body">
+			<div class="post-body">
 
-            <article class="copy-area">
+				<article class="copy-area">
 
-               <form class="form-horizontal" role="form">
-                  <div class="form-group">
-                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <div class="col-sm-offset-2 col-sm-10">
-                        <div class="checkbox">
-                           <label>
-                              <input type="checkbox"> Remember me
-                           </label>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">Sign in</button>
-                     </div>
-                  </div>
-               </form>
+					<form class="form-horizontal interested-form" role="form">
+					
+						<div class="row">
+							<div class="col-sm-4 label-holder">
+								<label for="name" class="control-label">Name</label>
+							</div> <!-- col -->
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="name" placeholder="Your name">
+							</div> <!-- col -->
+						</div> <!-- row -->
+						<div class="row">
+							<div class="col-sm-4 label-holder">
+								<label for="email" class="control-label">Email Address</label>
+							</div> <!-- col -->
+							<div class="col-sm-8">
+								<input type="email" class="form-control" id="email" placeholder="Your email">
+							</div> <!-- col -->
+						</div> <!-- row -->
+						<div class="row">
+							<div class="col-sm-4 label-holder">
+								<label for="phone" class="control-label">Phone Number</label>
+							</div> <!-- col -->
+							<div class="col-sm-8">
+								<input type="phone" class="form-control" id="phone" placeholder="Your phone number">
+							</div> <!-- col -->
+						</div> <!-- row -->
+						<div class="row">
+							<div class="col-sm-4 label-holder">
+								<label for="budget" class="control-label">Estimated Budget</label>
+							</div> <!-- col -->
+							<div class="col-sm-8">
+								<select id="budget" class="form-control">
+									<option>$5,000 - $10,000</option>
+									<option>Over $10,000</option>
+								</select>
+							</div> <!-- col -->
+						</div> <!-- row -->
 
-            </article>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-default">Send</button>
+							</div>
+						</div>
 
-         </div>
+					</form>
 
-      </div>
+				</article>
 
-   </article>
+			</div>
+
+		</div>
+
+	</article>
 
 </div>
