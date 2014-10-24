@@ -153,11 +153,17 @@ section {
 		margin-bottom: 3rem;
 		@include transitions(600ms);
 		opacity: 0;
-		 -webkit-filter: blur(5px);
-			-moz-filter: blur(5px);
-			  -o-filter: blur(5px);
-			 -ms-filter: blur(5px);
-				 filter: blur(5px);
+
+		 -webkit-filter: blur(15px);
+			-moz-filter: blur(15px);
+			  -o-filter: blur(15px);
+			 -ms-filter: blur(15px);
+				 filter: blur(15px);
+		 -moz-transform: scale(0.8);
+	  -webkit-transform: scale(0.8);
+		   -o-transform: scale(0.8);
+		  -ms-transform: scale(0.8);
+			  transform: scale(0.8);
 	}
 	.mast-active {
 		opacity: 1;
@@ -165,7 +171,12 @@ section {
 			-moz-filter: blur(0px);
 			  -o-filter: blur(0px);
 			 -ms-filter: blur(0px);
-				 filter: blur(0px);	
+				 filter: blur(0px);
+		 -moz-transform: scale(1);
+	  -webkit-transform: scale(1);
+		   -o-transform: scale(1);
+		  -ms-transform: scale(1);
+			  transform: scale(1);
 	}
 	.hdr-btns {
 		a {
