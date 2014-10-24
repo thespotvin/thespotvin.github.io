@@ -152,20 +152,6 @@ section {
 		max-width: 50%;
 		margin-bottom: 3rem;
 		@include transitions(600ms);
-		opacity: 0;
-
-		 -webkit-filter: blur(15px);
-			-moz-filter: blur(15px);
-			  -o-filter: blur(15px);
-			 -ms-filter: blur(15px);
-				 filter: blur(15px);
-		 -moz-transform: scale(0.8);
-	  -webkit-transform: scale(0.8);
-		   -o-transform: scale(0.8);
-		  -ms-transform: scale(0.8);
-			  transform: scale(0.8);
-	}
-	.mast-active {
 		opacity: 1;
 		 -webkit-filter: blur(0px);
 			-moz-filter: blur(0px);
@@ -177,6 +163,19 @@ section {
 		   -o-transform: scale(1);
 		  -ms-transform: scale(1);
 			  transform: scale(1);
+	}
+	.mast-hidden {
+		opacity: 0;
+		 -webkit-filter: blur(15px);
+			-moz-filter: blur(15px);
+			  -o-filter: blur(15px);
+			 -ms-filter: blur(15px);
+				 filter: blur(15px);
+		 -moz-transform: scale(0.8);
+	  -webkit-transform: scale(0.8);
+		   -o-transform: scale(0.8);
+		  -ms-transform: scale(0.8);
+			  transform: scale(0.8);
 	}
 	.hdr-btns {
 		a {
